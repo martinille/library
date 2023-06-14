@@ -13,5 +13,5 @@ function isLocalhost() {
 	if (!array_key_exists('REMOTE_ADDR', $_SERVER) || null===$_SERVER['REMOTE_ADDR']) {
 		return true;
 	}
-	return in_array($_SERVER['REMOTE_ADDR'],array('127.0.0.1','::1')) || preg_match('/^192\.168\.\d+\.\d+$/', $_SERVER['REMOTE_ADDR']);
+	return in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1','::1')) || preg_match('/^192\.168\.\d+\.\d+$/', $_SERVER['REMOTE_ADDR']);
 }

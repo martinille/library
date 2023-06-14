@@ -7,7 +7,7 @@
  * @author Martin Ille
  * @email ille.martin@gmail.com
  *
- * @since PHP 7.3+
+ * @since PHP 7.0+
  * @dependencies:
  *   - cURL extension (required),
  *   - intl extension (optional but recommended)

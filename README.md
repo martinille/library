@@ -1,4 +1,4 @@
-# library of various PHP functions, classes, frameworks, etc.
+# The library of various PHP functions, classes, frameworks, ...
 
 
 ### PHP functions

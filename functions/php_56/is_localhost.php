@@ -11,11 +11,23 @@
  */
 function isLocalhost() {
 
+	// ddev project
+	if (array_key_exists('IS_DDEV_PROJECT', $_SERVER) && 'true' === strtolower($_SERVER['IS_DDEV_PROJECT'])) {
+		return true;
+	}
+
 	// probably CLI
 	if (!array_key_exists('REMOTE_ADDR', $_SERVER) || null===$_SERVER['REMOTE_ADDR']) {
 		return true;
 	}
 
 	// probably web-server
-	return in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1','::1')) || preg_match('/^192\.168\.\d+\.\d+$/', $_SERVER['REMOTE_ADDR']);
+	if (preg_match('/^192\.168\.\d+\.\d+$/', $_SERVER['REMOTE_ADDR'])) {
+		return true;
+	}
+	if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1','::1'))) {
+		return true;
+	}
+
+	return false;
 }
